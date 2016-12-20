@@ -1,0 +1,24 @@
+{
+  "name": "alexa-lunchlady",
+  "version": "1.0.0",
+  "description": "Alexa skill to check what's on the CBSD lunch menu",
+  "main": "index.js",
+  "dependencies": {
+    "alexa-app": "^2.3.4",
+    "cheerio": "^0.22.0",
+    "moment": "^2.17.1",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alexa",
+    "cbsd",
+    "lunch",
+    "menu"
+  ],
+  "author": "Adam Gruber <talknmime@gmail.com>",
+  "license": "ISC"
+}
