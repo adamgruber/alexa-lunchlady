@@ -19,3 +19,5 @@ app.error = function(exception, request, response) {
 };
 
 module.exports = app;
+
+exports.handler = app.lambda();
