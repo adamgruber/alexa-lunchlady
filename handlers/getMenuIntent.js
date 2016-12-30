@@ -66,7 +66,7 @@ const _constructMenus = dom => {
 
 const getMenuIntentHandler = function (req, response) {
   // See if the request has a DATE and default to today if not
-  const dateSlot = req.slot('DATE') || moment().format('YYYY-MM-DD');
+  const dateSlot = req.slot('Date') || moment().format('YYYY-MM-DD');
   console.log(`dateSlot: ${dateSlot}`);
 
   // Get the menu

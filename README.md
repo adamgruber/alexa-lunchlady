@@ -11,92 +11,109 @@ For example, to get the menu for `today`, you can say:
 Alexa, ask the lunch lady what's for lunch today.
 ```
 
+#### Intent Schema
+```js
+{
+  "intents": [
+    {
+      "intent": "GetMenuIntent",
+      "slots": [
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE"
+        }
+      ]
+    }
+  ]
+}
+```
+
 #### Sample Utterances
 
 ```
-What is for lunch {DATE}
-What's for lunch {DATE}
-What do they have for lunch {DATE}
-What can I get for lunch {DATE}
-What can I buy for lunch {DATE}
-What can I have for lunch {DATE}
-What is on the menu {DATE}
-What's on the menu {DATE}
-What do they have on the menu {DATE}
-What can I get on the menu {DATE}
-What can I buy on the menu {DATE}
-What can I have on the menu {DATE}
-What is on the lunch menu {DATE}
-What's on the lunch menu {DATE}
-What do they have on the lunch menu {DATE}
-What can I get on the lunch menu {DATE}
-What can I buy on the lunch menu {DATE}
-What can I have on the lunch menu {DATE}
-What is for lunch
-What's for lunch
-What do they have for lunch
-What can I get for lunch
-What can I buy for lunch
-What can I have for lunch
-What is on the menu
-What's on the menu
-What do they have on the menu
-What can I get on the menu
-What can I buy on the menu
-What can I have on the menu
-What is on the lunch menu
-What's on the lunch menu
-What do they have on the lunch menu
-What can I get on the lunch menu
-What can I buy on the lunch menu
-What can I have on the lunch menu
-What are they serving for lunch {DATE}
-What are they making for lunch {DATE}
-What are they having for lunch {DATE}
-What are they serving on the menu {DATE}
-What are they making on the menu {DATE}
-What are they having on the menu {DATE}
-What are they serving on the lunch menu {DATE}
-What are they making on the lunch menu {DATE}
-What are they having on the lunch menu {DATE}
-What are they serving {DATE}
-What are they making {DATE}
-What are they having {DATE}
-What are they serving for lunch
-What are they making for lunch
-What are they having for lunch
-What are they serving on the menu
-What are they making on the menu
-What are they having on the menu
-What are they serving on the lunch menu
-What are they making on the lunch menu
-What are they having on the lunch menu
-What are they serving
-What are they making
-What are they having
-Give me the menu for {DATE}
-Get the menu for {DATE}
-Look up the menu for {DATE}
-Tell me the menu for {DATE}
-Give me the lunch menu for {DATE}
-Get the lunch menu for {DATE}
-Look up the lunch menu for {DATE}
-Tell me the lunch menu for {DATE}
-Give me the menu {DATE}
-Get the menu {DATE}
-Look up the menu {DATE}
-Tell me the menu {DATE}
-Give me the lunch menu {DATE}
-Get the lunch menu {DATE}
-Look up the lunch menu {DATE}
-Tell me the lunch menu {DATE}
-lunch for {DATE}
-the menu for {DATE}
-the lunch menu for {DATE}
-lunch {DATE}
-the menu {DATE}
-the lunch menu {DATE}
-{DATE}'s menu
-{DATE}'s lunch
-{DATE}'s lunch menu
+GetMenuIntent what is for lunch {Date}
+GetMenuIntent what's for lunch {Date}
+GetMenuIntent what do they have for lunch {Date}
+GetMenuIntent what can I get for lunch {Date}
+GetMenuIntent what can I buy for lunch {Date}
+GetMenuIntent what can I have for lunch {Date}
+GetMenuIntent what is on the menu {Date}
+GetMenuIntent what's on the menu {Date}
+GetMenuIntent what do they have on the menu {Date}
+GetMenuIntent what can I get on the menu {Date}
+GetMenuIntent what can I buy on the menu {Date}
+GetMenuIntent what can I have on the menu {Date}
+GetMenuIntent what is on the lunch menu {Date}
+GetMenuIntent what's on the lunch menu {Date}
+GetMenuIntent what do they have on the lunch menu {Date}
+GetMenuIntent what can I get on the lunch menu {Date}
+GetMenuIntent what can I buy on the lunch menu {Date}
+GetMenuIntent what can I have on the lunch menu {Date}
+GetMenuIntent what is for lunch
+GetMenuIntent what's for lunch
+GetMenuIntent what do they have for lunch
+GetMenuIntent what can I get for lunch
+GetMenuIntent what can I buy for lunch
+GetMenuIntent what can I have for lunch
+GetMenuIntent what is on the menu
+GetMenuIntent what's on the menu
+GetMenuIntent what do they have on the menu
+GetMenuIntent what can I get on the menu
+GetMenuIntent what can I buy on the menu
+GetMenuIntent what can I have on the menu
+GetMenuIntent what is on the lunch menu
+GetMenuIntent what's on the lunch menu
+GetMenuIntent what do they have on the lunch menu
+GetMenuIntent what can I get on the lunch menu
+GetMenuIntent what can I buy on the lunch menu
+GetMenuIntent what can I have on the lunch menu
+GetMenuIntent what are they serving for lunch {Date}
+GetMenuIntent what are they making for lunch {Date}
+GetMenuIntent what are they having for lunch {Date}
+GetMenuIntent what are they serving on the menu {Date}
+GetMenuIntent what are they making on the menu {Date}
+GetMenuIntent what are they having on the menu {Date}
+GetMenuIntent what are they serving on the lunch menu {Date}
+GetMenuIntent what are they making on the lunch menu {Date}
+GetMenuIntent what are they having on the lunch menu {Date}
+GetMenuIntent what are they serving {Date}
+GetMenuIntent what are they making {Date}
+GetMenuIntent what are they having {Date}
+GetMenuIntent what are they serving for lunch
+GetMenuIntent what are they making for lunch
+GetMenuIntent what are they having for lunch
+GetMenuIntent what are they serving on the menu
+GetMenuIntent what are they making on the menu
+GetMenuIntent what are they having on the menu
+GetMenuIntent what are they serving on the lunch menu
+GetMenuIntent what are they making on the lunch menu
+GetMenuIntent what are they having on the lunch menu
+GetMenuIntent what are they serving
+GetMenuIntent what are they making
+GetMenuIntent what are they having
+GetMenuIntent give me the menu for {Date}
+GetMenuIntent get the menu for {Date}
+GetMenuIntent look up the menu for {Date}
+GetMenuIntent tell me the menu for {Date}
+GetMenuIntent give me the lunch menu for {Date}
+GetMenuIntent get the lunch menu for {Date}
+GetMenuIntent look up the lunch menu for {Date}
+GetMenuIntent tell me the lunch menu for {Date}
+GetMenuIntent give me the menu {Date}
+GetMenuIntent get the menu {Date}
+GetMenuIntent look up the menu {Date}
+GetMenuIntent tell me the menu {Date}
+GetMenuIntent give me the lunch menu {Date}
+GetMenuIntent get the lunch menu {Date}
+GetMenuIntent look up the lunch menu {Date}
+GetMenuIntent tell me the lunch menu {Date}
+GetMenuIntent lunch for {Date}
+GetMenuIntent the menu for {Date}
+GetMenuIntent the lunch menu for {Date}
+GetMenuIntent lunch {Date}
+GetMenuIntent the menu {Date}
+GetMenuIntent the lunch menu {Date}
+GetMenuIntent {Date} menu
+GetMenuIntent {Date} lunch
+GetMenuIntent {Date} lunch menu
 ```
