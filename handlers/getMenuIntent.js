@@ -55,7 +55,7 @@ const _constructMenus = dom => {
       const dateStr = date.format('YYYY-MM-DD');
       console.log(`dateStr: ${dateStr}`);
       const menuItems = $el.nextAll('[id^=plnLunch]').first().find('li span')
-        .map((j, elem) => $(elem).text().trim())
+        .map((j, elem) => $(elem).text().trim().replace(/&/g, 'and'))
         .toArray();
       menus[dateStr] = compact(menuItems);
     }
