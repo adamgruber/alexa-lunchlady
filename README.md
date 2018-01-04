@@ -1,8 +1,8 @@
-#alexa-lunchlady
+# alexa-lunchlady
 
 Lunch Lady is an Alexa skill that allows you to retrieve the daily school [lunch menu](http://www.cbsd.org/Page/1593) for CBSD elementary schools. It was built using the [alexa-app](https://github.com/matt-kruse/alexa-app) framework and runs as an AWS Lambda function.
 
-##Getting the Menu
+## Getting the Menu
 
 In order to get the menu you must invoke the skill with the invocation `lunch lady`. You can request the menu for any date, relative or absolute.
 
