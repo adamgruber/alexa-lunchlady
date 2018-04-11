@@ -1,25 +1,11 @@
-'use strict';
+const Alexa = require('alexa-sdk');
+const handlers = require('./lib/handlers');
 
-const alexa = require('alexa-app');
-const getMenuSchema = require('./schemas/getMenu');
-const getMenuIntentHandler = require('./handlers/getMenuIntent');
+const APP_ID = 'amzn1.ask.skill.5fd2362f-ed50-4c00-a703-aa4958691058';
 
-// Allow this module to be reloaded by hotswap when changed
-module.change_code = 1;
-
-// Define an alexa-app
-const app = new alexa.app('lunchlady');
-
-app.launch((req, res) => {
-  res.say('Hello, I\'m the lunch lady. You can ask me what\'s for lunch and I will tell you the menu.');
-});
-
-app.intent('GetMenuIntent', getMenuSchema, getMenuIntentHandler);
-
-app.error = (exception, request, response) => {
-  response.say('Sorry, I\'m having trouble getting the lunch menu.');
+exports.handler = (event, context, callback) => {
+  const alexa = Alexa.handler(event, context, callback);
+  alexa.appId = APP_ID;
+  alexa.registerHandlers(handlers);
+  alexa.execute();
 };
-
-module.exports = app;
-
-exports.handler = app.lambda();
