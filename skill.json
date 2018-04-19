@@ -1,0 +1,33 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "This is a skill to have Alexa tell you what's on the school menu.",
+          "examplePhrases": [
+            "Alexa, open Lunch Lady",
+            "Alexa, ask Lunch Lady what's for lunch today?",
+            "Alexa, ask Lunch Lady what's on the menu?"
+          ],
+          "smallIconUri": "",
+          "largeIconUri": "",
+          "name": "Lunch Lady DEV",
+          "description": "This skill will let you know what items are on the school menu for a specific day."
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Say 'Alexa, open Lunch Lady'",
+      "category": "CHILDRENS_EDUCATION_AND_REFERENCE",
+      "distributionCountries": ["US"]
+    },
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    }
+  }
+}

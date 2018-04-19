@@ -1,0 +1,108 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "lunch lady",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetMenuIntent",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "what's for lunch {date}",
+                        "what's on the menu {date}",
+                        "get the lunch menu for {date}"
+                    ]
+                },
+                {
+                    "name": "SetSchoolIntent",
+                    "slots": [
+                        {
+                            "name": "school",
+                            "type": "AMAZON.EducationalOrganization",
+                            "samples": [
+                                "{school}",
+                                "My school is {school} "
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "use {school} as my school",
+                        "change my school to {school}",
+                        "set my school to {school}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "SetSchoolIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "school",
+                            "type": "AMAZON.EducationalOrganization",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.1361667315161.517520932853",
+                                "elicitation": "Elicit.Slot.1361667315161.517520932853"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent.259101831933",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I heard {school} . Is that correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1361667315161.517520932853",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the name of your {school} "
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is the name of your {school} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1361667315161.517520932853",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Your school is {school} . Is that correct?"
+                    }
+                ]
+            }
+        ]
+    }
+}
