@@ -1,0 +1,40 @@
+service: lunch-lady
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'} # default stage is dev, but you can override it.
+  region: us-east-1 # Default
+  memorySize: 256
+  cfLogs: true # AWS Cloudformation logging
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:CreateTable
+      Resource: "arn:aws:dynamodb:us-east-1:*:*"
+
+functions:
+  LunchLady:
+    handler: index.handler # path to the alexa handler - {path}/{filename}.{handler function}
+    description: School lunch menu
+    events:
+      - alexaSkill
+          #appId: amzn1.ask.skill.xxx
+          #enabled: true
+    environment:
+      ALEXA_APP_ID: ''
+      DYNAMODB_TABLE: AlexaLunchLady
+
+
+plugins:
+  - serverless-webpack
+custom:
+  webpack:
+    includeModules: true

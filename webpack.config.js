@@ -1,10 +1,9 @@
-const path = require('path');
+const slsw = require('serverless-webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: './index.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+  entry: slsw.lib.entries,
+  externals: [nodeExternals()],
+  mode: 'production',
   target: 'node',
 };

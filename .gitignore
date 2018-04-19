@@ -1,5 +1,7 @@
-logs
 *.log
+.env
+.serverless
 coverage
 dist
+logs
 node_modules
