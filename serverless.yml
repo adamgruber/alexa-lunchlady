@@ -29,7 +29,7 @@ functions:
           #appId: amzn1.ask.skill.xxx
           #enabled: true
     environment:
-      ALEXA_APP_ID: ''
+      ALEXA_APP_ID: 'amzn1.ask.skill.d44082b1-4b43-4828-92d7-603e8d52e890'
       DYNAMODB_TABLE: AlexaLunchLady
 
 

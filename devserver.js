@@ -1,25 +1,26 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const express = require('express');
-const bodyParser = require('body-parser');
+const Koa = require('koa');
+const bodyParser = require('koa-bodyparser');
+const Router = require('koa-router');
 
-const { handler } = require('./lib');
+const { handler } = require('./index');
 
-const server = express();
-server.use(bodyParser.json());
+const app = new Koa();
+const router = new Router();
+app.use(bodyParser());
 
 // Create POST route
-server.post('/', (req, res) => {
-  // Create dummy context with fail and succeed functions
-  const context = {
-    fail: () => res.sendStatus(500),
-    succeed: data => res.send(data),
-  };
+router.post('/', async ctx => {
+  const { body } = ctx.request;
 
-  // Initialize alexa sdk
-  handler(req.body, context);
+  // Call the Lambda function
+  const res = await handler(body);
+  ctx.body = res;
 });
 
-// Start express server
-server.listen(3000, () => {
+app.use(router.routes());
+
+// Start Koa server
+app.listen(3000, () => {
   console.log('Local alexa skill listening on port 3000!');
 });
